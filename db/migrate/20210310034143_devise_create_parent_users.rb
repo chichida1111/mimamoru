@@ -7,12 +7,11 @@ class DeviseCreateParentUsers < ActiveRecord::Migration[6.0]
       t.string  :email,              null: false
       t.string  :encrypted_password, null: false, unique: true
       t.string  :phone_number,       null: false
-      t.string  :last_name_c_j,      null: false
-      t.string  :first_name_c_j,     null: false
-      t.string  :last_name_c_k,      null: false
-      t.string  :first_name_c_k,     null: false
-      t.date    :birthday,           null: false
-      t.integer :class_c_id,         null: false
+      t.string  :last_name_p_j,      null: false
+      t.string  :first_name_p_j,     null: false
+      t.string  :last_name_p_k,      null: false
+      t.string  :first_name_p_k,     null: false
+      t.integer :class_id,         null: false
 
 
       ## Recoverable

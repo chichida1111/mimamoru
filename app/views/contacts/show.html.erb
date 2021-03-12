@@ -1,0 +1,12 @@
+<%=  "#{@contact.first_name_c_j}ちゃんのページ" %>
+
+ <div class="prototype__image">
+        <%= image_tag @contact.image %>
+</div>
+
+       <% if parent_user_signed_in? && current_parent_user.id == @contact.parent_user_id %>
+        <div class="prototype__manage">
+          <%= link_to "編集する", edit_contact_path(@contact.id), class: :prototype__btn %>
+          <%= link_to "削除する", contact_path(@contact.id), method: :delete, class: :prototype__btn %>
+        </div>
+       <% end %>

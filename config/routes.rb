@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'messages/create'
   devise_for :parent_users, controllers: {
     sessions: 'parent_users/sessions',
     registrations: 'parent_users/registrations'
@@ -10,10 +11,10 @@ Rails.application.routes.draw do
     registrations: 'teacher_users/registrations'
   }
 
+  resources :contacts
 
-  
+  resources :messages, only: [:create ]
+
   root to: "contacts#index"
-  
-  resources :contacts, only: [:index, :new, :create ]
 
 end

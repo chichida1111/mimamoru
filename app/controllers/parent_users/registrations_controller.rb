@@ -3,7 +3,7 @@ class ParentUsers::RegistrationsController < Devise::RegistrationsController
   
 
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [ :phone_number, :last_name_c_j, :first_name_c_j, :last_name_c_k, :first_name_c_k, :birthday, :class_c_id ])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [ :phone_number, :last_name_p_j, :first_name_p_j, :last_name_p_k, :first_name_p_k, :class_id ])
   end
 end
 
